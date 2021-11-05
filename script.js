@@ -1,21 +1,20 @@
-const output = document.getElementById('toDoText'); //Textbox input item
-const submitButton = document.getElementById('submit-button'); //Button input item
+const output = document.getElementById('toDoTextBox'); //Textbox input item
+const submitButton = document.getElementById('toDoSubmitButton'); //Button input item
+const deleteButton = document.getElementById('toDoDeleteButton');
 
-submitButton.addEventListener('click', e => {
-  e.preventDefault(); //dont refresh the browser
-  const todo = output.value; //only works with input elements
-  var li = document.createElement('li');
-  li.innerText = todo;
-  document.body.appendChild(li);
+submitButton.addEventListener('click', e => { //make this variable have an event listener
+  e.preventDefault(); //dont refresh the browser on submit
+  const todo = output.value; //variable gets the value from output variable
+  const toDoItem = document.createElement('li'); //creates a list element
+  toDoItem.innerText = todo; //writes the value of to do to the list item
+  document.body.appendChild(toDoItem); //what does this do? 
 })
 
-
-
-
-
-
-
-
+deleteButton.addEventListener('click', e => { //make this variable have an event listener
+  e.preventDefault(); //dont refresh the browser on submit
+  var toDoDeleteAction = document.getElementById('li')
+  toDoDeleteAction.remove();
+})
 
 
 // const first = document.getElementById('firstToDo')
