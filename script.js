@@ -1,25 +1,30 @@
 const textBox = document.getElementById('textBox');
 const submitButton = document.getElementById('submitButton');
-const deleteButton = document.getElementById('clearButton');
+const clearButton = document.getElementById('clearButton');
+i = 1;
 
-
-submitButton.addEventListener('click', e => { 
-  e.preventDefault(); //dont refresh the browser on submit
-  test2();
-  function test2() {
-  const textBoxValue = textBox.value; //variable gets the value from output variable
-  const toDoItem = document.createElement('li'); //creates a list element
-  i = 1;
-  toDoItem.className = "toDoItem " + i;
+submitButton.addEventListener("click", e => { 
+  e.preventDefault();
+  textBoxValue = textBox.value;
+  const toDoItem = document.createElement('li');
+  toDoItem.id = "toDoItem_" + i;
   i++;
-  toDoItem.innerText = textBoxValue; //writes the value of to do to the list item
-  const listElement = document.getElementById('toDoList');
-  listElement.appendChild(toDoItem); //grab reference to ul, append child to said reference x
-
-  
-  
-}
+  toDoItem.innerText=textBoxValue;
+  const toDoList = document.getElementById('toDoList');
+  toDoList.appendChild(toDoItem);
 })
+
+//
+// document.addEventListener('click', e => { 
+//   e.preventDefault();
+//   alert("ballz");
+// })
+
+//get value from textbox
+//store it in a variable\
+//create an li
+//append it to ul
+
 
 //
 // for (x = 1; x < 100; x++){
