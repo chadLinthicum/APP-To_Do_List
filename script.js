@@ -1,18 +1,52 @@
 const textBox = document.getElementById('textBox');
 const submitButton = document.getElementById('submitButton');
 const clearButton = document.getElementById('clearButton');
-i = 1;
+var i = 1;
 
-submitButton.addEventListener("click", e => { 
-  e.preventDefault();
+////
+function submit() {
   textBoxValue = textBox.value;
-  const toDoItem = document.createElement('li');
+  const toDoItem = document.createElement('button');
   toDoItem.id = "toDoItem_" + i;
+  toDoItem.className = "toDoItems";
   i++;
   toDoItem.innerText=textBoxValue;
   const toDoList = document.getElementById('toDoList');
   toDoList.appendChild(toDoItem);
+}
+
+////
+submitButton.addEventListener("click", e => { 
+  e.preventDefault();
+  submit();
 })
+
+////
+const listItemButton = document.getElementById('toDoList');
+
+listItemButton.addEventListener("click", e => { 
+  e.preventDefault();
+  listItemButton.remove();
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var asdasd = document.getElementById('toDoItem_1')
+
+// asdasd.addEventListener("click", e => { 
+//   e.preventDefault();
+//   alert("balls");
+// })
 
 //
 // document.addEventListener('click', e => { 
@@ -24,7 +58,6 @@ submitButton.addEventListener("click", e => {
 //store it in a variable\
 //create an li
 //append it to ul
-
 
 //
 // for (x = 1; x < 100; x++){

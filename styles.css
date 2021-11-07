@@ -6,3 +6,11 @@ li {
   list-style: none;
   color:blue;
 }
+
+.toDoItems {
+  display:block;
+  color:brown;
+  margin-left: 47%;
+  background: none;
+	border: none;
+}
