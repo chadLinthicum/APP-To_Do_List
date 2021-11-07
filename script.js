@@ -4,32 +4,30 @@ const clearButton = document.getElementById('clearButton');
 var i = 1;
 
 ////
-// function submit() {
-//   textBoxValue = textBox.value;
-//   const toDoItem = document.createElement('button');
-//   toDoItem.id = "toDoItem_" + i;
-//   toDoItem.className = "toDoItems";
-//   i++;
-//   toDoItem.innerText=textBoxValue;
-//   const toDoList = document.getElementById('toDoList');
-//   toDoList.appendChild(toDoItem);
-// }
+function submit() {
+  textBoxValue = textBox.value;
+  const toDoItem = document.createElement('li');
+  toDoItem.id = "toDoItem_" + i;
+  toDoItem.className = "toDoItems";
+  i++;
+  toDoItem.innerText=textBoxValue;
+  const toDoList = document.getElementById('toDoList');
+  toDoList.appendChild(toDoItem);
+}
 
 ////
-// submitButton.addEventListener("click", e => { 
-//   e.preventDefault();
-//   submit();
-// })
-
-////
-
-const listItemButton = document.getElementById('test');
-listItemButton.addEventListener("click", function(){ 
-  listItemButton.remove();
+submitButton.addEventListener("click", e => { 
+  e.preventDefault();
+  submit();
+  console.log(e);
 })
 
-
-
+////
+const listItemButton = document.getElementById("toDoList");
+listItemButton.addEventListener("click", function(e){ 
+  console.log(e.target);
+  // listItemButton.remove();
+})
 
 
 

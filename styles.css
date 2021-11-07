@@ -5,12 +5,13 @@ body {
 li {
   list-style: none;
   color:blue;
+  margin-right: 30px;
 }
 
-.toDoItems {
+/* .toDoItems {
   display:block;
   color:brown;
   margin-left: 47%;
   background: none;
 	border: none;
-}
+} */
