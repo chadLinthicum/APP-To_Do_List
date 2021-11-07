@@ -13,6 +13,7 @@ function submit() {
   toDoItem.innerText=textBoxValue;
   const toDoList = document.getElementById('toDoList');
   toDoList.appendChild(toDoItem);
+  textBox.value = ""; //clears the textBox
 }
 
 ////
