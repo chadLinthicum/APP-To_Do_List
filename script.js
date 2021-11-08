@@ -34,7 +34,7 @@ function deleteToDo(event) {
     event.target.classList.add("strikeThrough");
   } else {
   console.log("Test");
-  event.target.classList.add("");
+  event.target.removeAttribute("class");
 }
 }
 
