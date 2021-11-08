@@ -8,6 +8,10 @@ li {
   margin-right: 30px;
 }
 
+.strikeThrough {
+  text-decoration: line-through;
+}
+
 /* .toDoItems {
   display:block;
   color:brown;

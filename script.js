@@ -8,7 +8,7 @@ function submit() {
   textBoxValue = textBox.value;
   const toDoItem = document.createElement('li');
   toDoItem.id = "toDoItem_" + i;
-  toDoItem.className = "toDoItems";
+  // toDoItem.className = "toDoItems";
   i++;
   toDoItem.innerText=textBoxValue;
   const toDoList = document.getElementById('toDoList');
@@ -29,10 +29,14 @@ submitButton.addEventListener("click", event => {
 })
 
 function deleteToDo(event) {
-  //console.log(e.target);
-  //const todo = e.target;
-  event.target.remove();
-} 
+  // console.log(event.target.className);
+  if (event.target.className == "") {
+    event.target.classList.add("strikeThrough");
+  } else {
+  console.log("Test");
+  event.target.classList.add("");
+}
+}
 
 //create a srtikethourhg class in CSS 
 //add/remove class dynamically based on user click 
