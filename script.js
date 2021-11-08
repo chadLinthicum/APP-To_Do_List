@@ -7,7 +7,7 @@ var i = 1;
 function submit() {
   textBoxValue = textBox.value;
   const toDoItem = document.createElement('li');
-  toDoItem.id = Date.now();
+  toDoItem.id = "toDoItem_" + i;
   toDoItem.className = "toDoItems";
   i++;
   toDoItem.innerText=textBoxValue;
@@ -18,35 +18,24 @@ function submit() {
   toDoItem.addEventListener('click', deleteToDo)
 }
 
-
-//create a srtikethourhg class in CSS 
-//add/remove class dynamically based on user click 
-
-
 ////
 submitButton.addEventListener("click", event => { 
   event.preventDefault();
   if (textBox.value == "") {
-    alert("Please enter something!");
+    alert("Oy! Ya gotta do somethin!");
   } else {
     submit();
   }
-  // console.log(e);
 })
-
-////
-// const listItemButton = document.getElementById("toDoList");
-
-// listItemButton.addEventListener("click", deleteToDo)
 
 function deleteToDo(event) {
   //console.log(e.target);
   //const todo = e.target;
   event.target.remove();
- // e.target.id.remove();
-  // console.log(e.target.id);
 } 
 
+//create a srtikethourhg class in CSS 
+//add/remove class dynamically based on user click 
 
 
 
