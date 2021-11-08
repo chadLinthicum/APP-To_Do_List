@@ -6,16 +6,23 @@ var i = 1;
 ////
 function submit() {
   textBoxValue = textBox.value;
-  const toDoItem = document.createElement('li');
-  toDoItem.id = "toDoItem_" + i;
+  const toDoItemButton = document.createElement('button');
+  if (toDoItemButton.textContent == "") {
+    toDoItemButton.textContent = "X";
+  }
+  const toDoItemText = document.createElement('li');
+  toDoItemText.id = "toDoItem_" + i;
   // toDoItem.className = "toDoItems";
   i++;
-  toDoItem.innerText=textBoxValue;
+  toDoItemText.innerText=textBoxValue;
   const toDoList = document.getElementById('toDoList');
-  toDoList.appendChild(toDoItem);
+  toDoList.appendChild(toDoItemText);
+  toDoList.appendChild(toDoItemButton);
   textBox.value = ""; //clears the textBox
   // deleteToDo(toDoItem) //this passes it so it can be used outside the function 
-  toDoItem.addEventListener('click', deleteToDo)
+  toDoItemText.addEventListener('click', strikethroughTheText)
+  toDoItemText.addEventListener('click', deleteToDo)
+  toDoItemButton.addEventListener('click', deleteToDo)
 }
 
 ////
@@ -28,15 +35,22 @@ submitButton.addEventListener("click", event => {
   }
 })
 
-function deleteToDo(event) {
+function strikethroughTheText(event) {
   // console.log(event.target.className);
   if (event.target.className == "") {
     event.target.classList.add("strikeThrough");
   } else {
-  console.log("Test");
+  // console.log("Test");
   event.target.removeAttribute("class");
+  }
 }
+
+function deleteToDo(event) {
+  console.log(event);
+  event.target.remove();
 }
+
+
 
 //create a srtikethourhg class in CSS 
 //add/remove class dynamically based on user click 

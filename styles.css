@@ -6,10 +6,17 @@ li {
   list-style: none;
   color:blue;
   margin-right: 30px;
+  font-weight: bold;
 }
 
 .strikeThrough {
   text-decoration: line-through;
+  color:red;
+  font-weight: bold;
+}
+
+ul {
+  display:flex;
 }
 
 /* .toDoItems {
