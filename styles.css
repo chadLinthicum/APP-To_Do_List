@@ -3,9 +3,15 @@ body {
 }
 
 li {
-  list-style: none;
-  color:blue;
-  margin-right: 30px;
+  display: inline-block;
+}
+
+button {
+  margin: 5px;
+}
+
+ul div {
+  color:seagreen;
   font-weight: bold;
 }
 
@@ -15,14 +21,3 @@ li {
   font-weight: bold;
 }
 
-ul {
-  display:flex;
-}
-
-/* .toDoItems {
-  display:block;
-  color:brown;
-  margin-left: 47%;
-  background: none;
-	border: none;
-} */

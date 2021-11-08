@@ -5,21 +5,30 @@ var i = 1;
 
 ////
 function submit() {
-  textBoxValue = textBox.value;
+  const ulDiv = document.createElement('div');
   const toDoItemButton = document.createElement('button');
+  const toDoItemText = document.createElement('li');
+  const toDoList = document.getElementById('toDoList');
+  const textBoxValue = textBox.value;
   if (toDoItemButton.textContent == "") {
     toDoItemButton.textContent = "X";
   }
-  const toDoItemText = document.createElement('li');
-  toDoItemText.id = "toDoItem_" + i;
+  
+  toDoList.appendChild(ulDiv);
+
+  ulDiv.id = "toDoItem_" + i;
   // toDoItem.className = "toDoItems";
   i++;
   toDoItemText.innerText=textBoxValue;
-  const toDoList = document.getElementById('toDoList');
-  toDoList.appendChild(toDoItemText);
-  toDoList.appendChild(toDoItemButton);
+  
+  ulDiv.appendChild(toDoItemText);
+  ulDiv.appendChild(toDoItemButton);
+  
   textBox.value = ""; //clears the textBox
+  
   // deleteToDo(toDoItem) //this passes it so it can be used outside the function 
+
+
   toDoItemText.addEventListener('click', strikethroughTheText)
   toDoItemText.addEventListener('click', deleteToDo)
   toDoItemButton.addEventListener('click', deleteToDo)
@@ -47,7 +56,7 @@ function strikethroughTheText(event) {
 
 function deleteToDo(event) {
   console.log(event);
-  event.target.remove();
+  // event.target.remove();
 }
 
 
