@@ -7,30 +7,56 @@ var i = 1;
 function submit() {
   textBoxValue = textBox.value;
   const toDoItem = document.createElement('li');
-  toDoItem.id = "toDoItem_" + i;
+  toDoItem.id = Date.now();
   toDoItem.className = "toDoItems";
   i++;
   toDoItem.innerText=textBoxValue;
   const toDoList = document.getElementById('toDoList');
   toDoList.appendChild(toDoItem);
   textBox.value = ""; //clears the textBox
+  // deleteToDo(toDoItem) //this passes it so it can be used outside the function 
+  toDoItem.addEventListener('click', deleteToDo)
 }
 
+
+//create a srtikethourhg class in CSS 
+//add/remove class dynamically based on user click 
+
+
 ////
-submitButton.addEventListener("click", e => { 
-  e.preventDefault();
-  submit();
-  console.log(e);
+submitButton.addEventListener("click", event => { 
+  event.preventDefault();
+  if (textBox.value == "") {
+    alert("Please enter something!");
+  } else {
+    submit();
+  }
+  // console.log(e);
 })
 
 ////
-const listItemButton = document.getElementById("toDoList");
-listItemButton.addEventListener("click", function(e){ 
-  console.log(e.target);
-  // listItemButton.remove();
-})
+// const listItemButton = document.getElementById("toDoList");
+
+// listItemButton.addEventListener("click", deleteToDo)
+
+function deleteToDo(event) {
+  //console.log(e.target);
+  //const todo = e.target;
+  event.target.remove();
+ // e.target.id.remove();
+  // console.log(e.target.id);
+} 
 
 
+
+
+
+
+
+
+
+
+// const test = document.getElementById("toDoItem_1");
 
 
 
