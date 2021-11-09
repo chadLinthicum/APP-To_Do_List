@@ -30,7 +30,7 @@ function submit() {
 
 
   toDoItemText.addEventListener('click', strikethroughTheText)
-  toDoItemText.addEventListener('click', deleteToDo)
+  
   toDoItemButton.addEventListener('click', deleteToDo)
 }
 
@@ -54,9 +54,8 @@ function strikethroughTheText(event) {
   }
 }
 
-function deleteToDo(event) {
-  console.log(event);
-  // event.target.remove();
+function deleteToDo() {
+    console.log(document.parentElement); // returning null
 }
 
 
