@@ -28,7 +28,7 @@ function submit() {
 }
 
 ////
-submitButton.addEventListener("click", event => { 
+submitButton.addEventListener("click", event => {
   event.preventDefault();
   if (textBox.value == "") {
     alert("Oy! Ya gotta do somethin!");
