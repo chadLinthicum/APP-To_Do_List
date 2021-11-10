@@ -31,7 +31,8 @@ function submit() {
 
   toDoItemText.addEventListener('click', strikethroughTheText)
   
-  toDoItemButton.addEventListener('click', deleteToDo)
+  toDoItemButton.addEventListener('click', () => deleteToDo(toDoItemButton));
+  console.log(toDoItemButton.parentElement);
 }
 
 ////
@@ -56,13 +57,15 @@ function strikethroughTheText(event) {
 }
 
 ////
-function deleteToDo(event) {
+function deleteToDo(element) {
+  element.parentElement.remove();
+  
   // console.log(event.target);
   // console.log(event.target.className)  
   // var x = document.getElementsByClassName
   // console.log(x);
-  var x = document.getElementsByClassName("button").parentElement;
-  console.log(x);
+  // var x = document.getElementsByClassName("button").parentElement;
+  // console.log(x);
 }
 
 
