@@ -8,7 +8,7 @@
 <br>
 <b>Installation:</b> Download the repository and<br> open the index.html file.<br>
 <br>
- <b>Logistics:</b> Project consists of JS, HTML, and CSS. Practices include child appending.<br>
+ <b>Logistics:</b> Project consists of JS, HTML, and CSS. Practices include child appending and working with the DOM.<br>
 <br>
 <b>Author:</b> Chad Linthicum<br>
 <a href="https://www.linkedin.com/in/chad-a-linthicum/">Linked-In<a>
