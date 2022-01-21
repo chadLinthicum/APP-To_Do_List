@@ -8,6 +8,8 @@
 <br>
 <b>Installation:</b> Download the repository and<br> open the index.html file.<br>
 <br>
+ <b>Logistics:</b> App consists of JS, HTML, and CSS. Practices include child appending.<br>
+<br>
 <b>Author:</b> Chad Linthicum<br>
 <a href="https://www.linkedin.com/in/chad-a-linthicum/">Linked-In<a>
 </p>
