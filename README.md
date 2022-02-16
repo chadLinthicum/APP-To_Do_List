@@ -4,7 +4,9 @@
 <br>
 <b>Description:</b> Get things done with this handy To-Do List app!!<br>
 <br>
-  <b>Download: </b><a href="https://github.com/chadLinthicum/APP_To-Do-List_VanillaJS">Here</a><br>
+<b>View in your browser: </b><a href="https://chadlinthicum.github.io/APP_To-Do-List/">Here</a><br>
+<br>
+<b>Download: </b><a href="https://github.com/chadLinthicum/APP_To-Do-List_VanillaJS">Here</a><br>
 <br>
 <b>Installation:</b> Download the repository and<br> open the index.html file.<br>
 <br>
